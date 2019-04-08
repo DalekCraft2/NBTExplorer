@@ -176,12 +176,12 @@ namespace NBTExplorer.Windows
             {
                 RestoreDirectory = true,
                 Multiselect = true,
-                Filter =
-                    "All Files|*|NBT Files (*.dat, *.schematic)|*.dat;*.nbt;*.schematic|Region Files (*.mca, *.mcr)|*.mca;*.mcr",
-                FilterIndex = 0
-            })
-            {
-                if (ofd.ShowDialog() == DialogResult.OK) OpenPaths(ofd.FileNames);
+                Filter = "All Files|*|NBT Files (*.dat, *.schematic)|*.dat;*.nbt;*.schematic;*.schem|Region Files (*.mca, *.mcr)|*.mca;*.mcr",
+                FilterIndex = 0,
+            }) {
+                if (ofd.ShowDialog() == DialogResult.OK) {
+                    OpenPaths(ofd.FileNames);
+                }
             }
 
             UpdateUI();
