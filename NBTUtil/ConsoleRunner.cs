@@ -11,6 +11,7 @@ namespace NBTUtil
             new Dictionary<ConsoleCommand, ConsoleOperation>
             {
                 {ConsoleCommand.SetValue, new EditOperation()},
+                {ConsoleCommand.DeleteValue, new DeleteOperation()},
                 {ConsoleCommand.SetList, new SetListOperation()},
                 {ConsoleCommand.Print, new PrintOperation()},
                 {ConsoleCommand.PrintTree, new PrintTreeOperation()},
