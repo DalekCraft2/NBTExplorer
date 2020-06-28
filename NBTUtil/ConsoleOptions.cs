@@ -57,8 +57,8 @@ namespace NBTUtil
                             Values.Add(v);
                     }
                 },
-                {"help", "Print this help message", v => Command = ConsoleCommand.Help},
                 {"delete", "Delete the NBT tag if found", v => Command = ConsoleCommand.DeleteValue},
+                {"help", "Print this help message", v => Command = ConsoleCommand.Help},
                 {
                     "<>", v =>
                     {
