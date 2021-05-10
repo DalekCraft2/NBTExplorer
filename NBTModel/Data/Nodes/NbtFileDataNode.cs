@@ -10,14 +10,12 @@ namespace NBTExplorer.Model
 {
     public class NbtFileDataNode : DataNode, IMetaTagContainer
     {
-        private static readonly Regex _namePattern = new Regex(@"\.(dat|nbt|schematic|dat_mcr|dat_old|bpt|rc)$");
+        private static readonly Regex _namePattern = new Regex(@"\.(dat|nbt|schem(atic)?|dat_mcr|dat_old|bpt|rc)$");
         private readonly CompressionType _compressionType;
         private readonly string _path;
 
         private CompoundTagContainer _container;
         private NbtTree _tree;
-
-        private static Regex _namePattern = new Regex(@"\.(dat|nbt|schem(atic)?|dat_mcr|dat_old|bpt|rc)$");
 
         private NbtFileDataNode(string path, CompressionType compressionType)
         {

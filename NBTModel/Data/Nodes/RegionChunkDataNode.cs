@@ -111,36 +111,6 @@ namespace NBTExplorer.Model
             return false;
         }
 
-        public bool IsNamedContainer
-        {
-            get { return true; }
-        }
-
-        public bool IsOrderedContainer
-        {
-            get { return false; }
-        }
-
-        public INamedTagContainer NamedTagContainer
-        {
-            get { return _container; }
-        }
-
-        public IOrderedTagContainer OrderedTagContainer
-        {
-            get { return null; }
-        }
-
-        public int TagCount
-        {
-            get { return _container.TagCount; }
-        }
-
-        public bool DeleteTag (TagNode tag)
-        {
-            return _container.DeleteTag(tag);
-        }
-
         public override bool CanCreateTag(TagType type)
         {
             return Enum.IsDefined(typeof(TagType), type) && type != TagType.TAG_END;
